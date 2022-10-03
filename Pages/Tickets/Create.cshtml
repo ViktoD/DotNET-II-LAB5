@@ -1,0 +1,28 @@
+﻿@page
+@model lab5.Pages.Tickets.CreateModel
+
+<h1>Create new ticket</h1>
+
+<form method="post">
+	<div class"mb-3">
+		<label>Choose reader</label>
+		<select asp-for="_ticket.ReaderID" asp-items="@Model._items">
+			<option>Choose reader</option>
+		</select>
+		<span asp-validation-for="_ticket.ReaderID"></span>
+		
+	</div>
+	<div class"mb-3">
+		<label>Date start</label>
+		<input asp-for="_ticket.DateStart" type="date" />
+		<span asp-validation-for="_ticket.DateStart"></span>
+	</div>
+	<div class"mb-3">
+		<label>Date end</label>
+		<input asp-for="_ticket.DateEnd" type="date" />
+		<span asp-validation-for="_ticket.DateEnd"></span>
+	</div>
+	<button type="submit">Create new ticket</button>
+	<button><a asp-page="Index">Return to all tickets</a></button>
+
+</form>

@@ -1,0 +1,20 @@
+﻿@page
+@model lab5.Pages.Books.DeleteModel
+
+<form method = "post">
+	<input asp-for="_book.ID" hidden />
+	<label>Name book</label>
+	<input asp-for="_book.Name" disabled />
+	<br/>
+	<label>Author</label>
+	<input asp-for="_book.Author" disabled />
+	<br/>
+	<label>Price book</label>
+	<input asp-for="_book.Price" disabled />
+	<br/>
+	<label>Year published</label>
+	<input asp-for="_book.YearPublished" disabled />
+	<br/>
+	<button type="submit">Delete book</button>
+	<button><a asp-page="Index">Return to all books</a></button>
+</form>

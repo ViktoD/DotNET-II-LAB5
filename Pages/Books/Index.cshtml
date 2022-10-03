@@ -1,0 +1,67 @@
+﻿@page 
+@model lab5.Pages.Books.IndexModel
+
+
+<h1>Books</h1>
+@{
+    if(TempData["success"] != null)
+    {
+        <h1>@TempData["success"]</h1>
+    }
+}
+<a asp-page="Create" class="btn btn-primary">Add new book</a>
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Author
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Year published
+            </th>
+            <th>
+
+            </th>
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var book in Model._books)
+        {
+            <tr>
+                <td>
+                    @book.ID
+                </td>
+                <td>
+                    @book.Name
+                </td>
+                <td>
+                    @book.Author
+                </td>
+                <td>
+                    @book.Price
+                </td>
+                <td>
+                    @book.YearPublished
+                </td>
+                <td>
+                    <a asp-page="Edit" asp-route-id="@book.ID" class="btn btn-warning">Edit book</a>
+                </td>
+                <td>
+                    <a asp-page="Delete" asp-route-id="@book.ID" class="btn btn-danger">Delete book</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

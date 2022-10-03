@@ -1,0 +1,36 @@
+﻿@page
+@model lab5.Pages.InfoBooks.DeleteModel
+
+<h1>Delete information about book</h1>
+
+<form method="post" >
+	<input asp-for="_infoBook.ID" hidden />
+	<div class"mb-3">
+		<label>Name book</label>
+		<input asp-for="_book.Name" disabled />
+	</div>
+	<div class"mb-3">
+		<label>Author book</label>
+		<input asp-for="_book.Author" disabled />
+	</div>
+	<div class"mb-3">
+		<label>Price book</label>
+		<input asp-for="_book.Price" disabled />
+	</div>
+	<div class"mb-3">
+		<label>ID ticket</label>
+		<input asp-for="_ticket.ID" disabled />
+	</div>
+	<div class"mb-3">
+		<label>Surname reader</label>
+		<input asp-for="_reader.Surname" disabled />
+	</div>
+	<div class"mb-3">
+		<label>Name reader</label>
+		<input asp-for="_reader.Name" disabled />
+	</div>
+	
+	<button type="submit">Delete book</button>
+	<button><a asp-page="Index">Return to all books</a></button>
+
+</form>

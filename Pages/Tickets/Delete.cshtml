@@ -1,0 +1,23 @@
+﻿@page
+@model lab5.Pages.Tickets.DeleteModel
+
+<h1>Delete information about ticket</h1>
+
+<form method="post">
+	<input asp-for="_ticket.ID" hidden />
+	<div class"mb-3">
+		<label>Reader id</label>
+		<input asp-for="_ticket.ReaderID" disabled />
+	</div>
+	<div class"mb-3">
+		<label>Date start</label>
+		<input asp-for="_ticket.DateStart" disabled />
+	</div>
+	<div class"mb-3">
+		<label>Date end</label>
+		<input asp-for="_ticket.DateEnd" disabled/>
+	</div>
+	<button type="submit">Delete information about ticket</button>
+	<button><a asp-page="Index">Return to all tickets</a></button>
+
+</form>

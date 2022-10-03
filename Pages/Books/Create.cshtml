@@ -1,0 +1,23 @@
+﻿@page
+@model lab5.Pages.Books.CreateModel
+
+<form method = "post">
+	<label>Name book</label>
+	<input asp-for="_book.Name" />
+	<span asp-validation-for="_book.Name"></span>
+	<br/>
+	<label>Author</label>
+	<input asp-for="_book.Author" />
+	<span asp-validation-for="_book.Author"></span>
+	<br/>
+	<label>Price book</label>
+	<input asp-for="_book.Price"  />
+	<span asp-validation-for="_book.Price"></span>
+	<br/>
+	<label>Year published</label>
+	<input asp-for="_book.YearPublished"  />
+	<span asp-validation-for="_book.YearPublished"></span>
+	<br/>
+	<button type="submit">Add new book</button>
+	<button><a asp-page="Index">Return to all books</a></button>
+</form>

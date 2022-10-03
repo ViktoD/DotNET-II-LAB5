@@ -1,0 +1,35 @@
+﻿@page
+@model lab5.Pages.InfoBooks.CreateModel
+
+<h1>Add new information about book</h1>
+
+<form method="post">
+	<div class"mb-3">
+		<label>Book</label>
+		<select asp-for="_infoBook.BookID" asp-items="@Model._itemsBooks">
+			<option>Choose book</option>
+		</select>
+		<span asp-validation-for="_infoBook.BookID"></span>
+		
+	</div>
+	<div class"mb-3">
+		<label>Ticket</label>
+		<select asp-for="_infoBook.TicketID" asp-items="@Model._itemsTickets">
+			<option>Choose ticket</option>
+		</select>
+		<span asp-validation-for="_infoBook.TicketID"></span>
+
+	</div>
+	<div class"mb-3">
+		<label>Date take book</label>
+		<input asp-for="_infoBook.DateTakeBook" type="date" />
+		<span asp-validation-for="_infoBook.DateTakeBook"></span>
+	</div>
+	<div class"mb-3">
+		<label>Date return book</label>
+		<input asp-for="_infoBook.DateReturnBook" type="date" />
+	</div>
+	<button type="submit">Add new information about book</button>
+	<button><a asp-page="Index">View all information about books</a></button>
+
+</form>

@@ -1,0 +1,32 @@
+﻿@page
+@model lab5.Pages.Readers.EditModel
+
+<form method = "post">
+	<input asp-for="_reader.ID" hidden />
+	<label>Surname</label>
+	<input asp-for="_reader.Surname" />
+	<span asp-validation-for="_reader.Surname"></span>
+	<br/>
+	<label>Name</label>
+	<input asp-for="_reader.Name" />
+	<span asp-validation-for="_reader.Name"></span>
+	<br/>
+	<label>Patronymic name</label>
+	<input asp-for="_reader.PatronymicName" />
+		<span asp-validation-for="_reader.PatronymicName"></span>
+	<br/>
+	<label>Address</label>
+	<input asp-for="_reader.Address"  />
+	<span asp-validation-for="_reader.Address"></span>
+	<br/>
+	<label>Phone</label>
+	<input asp-for="_reader.Phone"  />
+	<span asp-validation-for="_reader.Phone"></span>
+	<br/>
+	<label>Date birth</label>
+	<input asp-for="_reader.DateBirth"  type="date" />
+	<span asp-validation-for="_reader.DateBirth"></span>
+	<br/>
+	<button type="submit">Update reader</button>
+	<button><a asp-page="Index">Return to all readers</a></button>
+</form>

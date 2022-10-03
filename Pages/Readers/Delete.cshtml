@@ -1,0 +1,27 @@
+﻿@page
+@model lab5.Pages.Readers.DeleteModel
+
+
+<form method = "post" asp-route-id="@Model._reader.ID">
+	<input asp-for="_reader.ID" hidden />
+	<label>Surname</label>
+	<input asp-for="_reader.Surname" disabled />
+	<br/>
+	<label>Name</label>
+	<input asp-for="_reader.Name" disabled />
+	<br/>
+	<label>Patronymic name</label>
+	<input asp-for="_reader.PatronymicName" disabled />
+	<br/>
+	<label>Address</label>
+	<input asp-for="_reader.Address" disabled />
+	<br/>
+	<label>Phone</label>
+	<input asp-for="_reader.Phone" disabled />
+	<br/>
+	<label>Date birth</label>
+	<input asp-for="_reader.DateBirth" disabled  />
+	<br/>
+	<button type="submit">Delete reader</button>
+	<button><a asp-page="Index">Return to all readers</a></button>
+</form>
